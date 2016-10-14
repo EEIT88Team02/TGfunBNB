@@ -1,4 +1,5 @@
 package check;
+//要jar檔
 import java.util.Properties;
 
 import javax.mail.Authenticator;

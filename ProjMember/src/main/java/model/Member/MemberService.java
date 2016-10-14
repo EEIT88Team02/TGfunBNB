@@ -33,9 +33,9 @@ public class MemberService {
 			List<BonusHistoryBean> bean = memberService.Bonus("EEE");
 			System.out.println(bean);
 
-			// MemberService MemberService = new MemberService();
-			// boolean bean = MemberService.status("DDD");
-			// System.out.println(bean);
+			 MemberService MemberService = new MemberService();
+			 boolean bean = MemberService.status("DDD");
+			 System.out.println(bean);
 
 			// MemberService MemberService = new MemberService();
 			// MemberBean bean=new MemberBean();
