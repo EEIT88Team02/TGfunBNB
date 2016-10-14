@@ -1,0 +1,77 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+<servlet>
+  <servlet-name>Kaptcha</servlet-name>
+  <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+  <!-- 是否要有邊框 -->
+  <init-param>
+   <param-name>kaptcha.border</param-name>
+   <param-value>yes</param-value>
+  </init-param>
+
+        <!-- 字體顏色 -->
+  <init-param>
+   <param-name>kaptcha.textproducer.font.color</param-name>
+   <param-value>black</param-value>
+  </init-param>
+        <!-- 驗證碼與驗證碼的間隙 -->
+  <init-param>
+   <param-name>kaptcha.textproducer.char.space</param-name>
+   <param-value>5</param-value>
+  </init-param>
+  
+  <!-- 背景顏色開始點 --> 
+  <init-param>
+   <param-name>kaptcha.background.clear.from</param-name>
+   <param-value>255,203,179</param-value>
+  </init-param>
+  
+  <!-- 背景顏色結束點 -->
+  <init-param>
+   <param-name>kaptcha.background.clear.to</param-name>
+   <param-value>255,153,153</param-value>
+  </init-param>
+
+<init-param>
+   <param-name>kaptcha.textproducer.char.string</param-name>
+   <param-value>abcde2345678gfynmnpwx</param-value>
+  </init-param>
+ </servlet>
+
+ <servlet-mapping>
+  <servlet-name>Kaptcha</servlet-name>
+  <url-pattern>/Kaptcha.jpg</url-pattern>
+ </servlet-mapping>
+
+ <welcome-file-list>
+  <welcome-file>KaptchaExample.jsp</welcome-file>
+ </welcome-file-list>
+</web-app>
+
+
+
+
+<!-- kaptcha.border  是否有邊框  默認爲true  我們可以自己設置yes，no   -->
+<!-- kaptcha.border.color   邊框顔色   默認爲Color.BLACK   -->
+<!-- kaptcha.border.thickness  邊框粗細度  默認爲1   -->
+<!-- kaptcha.producer.impl   驗證碼生成器  默認爲DefaultKaptcha   -->
+<!-- kaptcha.textproducer.impl   驗證碼文本生成器  默認爲DefaultTextCreator   -->
+<!-- kaptcha.textproducer.char.string   驗證碼文本字符內容範圍  默認爲abcde2345678gfynmnpwx   -->
+<!-- kaptcha.textproducer.char.length   驗證碼文本字符長度  默認爲5   -->
+<!-- kaptcha.textproducer.font.names    驗證碼文本字體樣式  默認爲new Font("Arial", 1, fontSize), new Font("Courier", 1, fontSize)   -->
+<!-- kaptcha.textproducer.font.size   驗證碼文本字符大小  默認爲40   -->
+<!-- kaptcha.textproducer.font.color  驗證碼文本字符顔色  默認爲Color.BLACK   -->
+<!-- kaptcha.textproducer.char.space  驗證碼文本字符間距  默認爲2   -->
+<!-- kaptcha.noise.impl    驗證碼噪點生成對象  默認爲DefaultNoise   -->
+<!-- kaptcha.noise.color   驗證碼噪點顔色   默認爲Color.BLACK   -->
+<!-- kaptcha.obscurificator.impl   驗證碼樣式引擎  默認爲WaterRipple   -->
+<!-- kaptcha.word.impl   驗證碼文本字符渲染   默認爲DefaultWordRenderer   -->
+<!-- kaptcha.background.impl   驗證碼背景生成器   默認爲DefaultBackground   -->
+<!-- kaptcha.background.clear.from   驗證碼背景顔色漸進   默認爲Color.LIGHT_GRAY   -->
+<!-- kaptcha.background.clear.to   驗證碼背景顔色漸進   默認爲Color.WHITE   -->
+<!-- kaptcha.image.width   驗證碼圖片寬度  默認爲200   -->
+<!-- kaptcha.image.height  驗證碼圖片高度  默認爲50 -->
