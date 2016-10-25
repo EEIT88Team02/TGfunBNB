@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eclipse-userlibraries version="2">
+    <library name="lib" systemlibrary="false">
+        <archive path="/test_web/src/main/webapp/lib/sqljdbc42.jar"/>
+        <archive path="/test_web/src/main/webapp/lib/kaptcha-2.3.2-jdk14.jar"/>
+    </library>
+</eclipse-userlibraries>

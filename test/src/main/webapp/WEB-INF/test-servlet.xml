@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+ http://www.springframework.org/schema/mvc
+ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<context:component-scan base-package="tgfun.*"/>
+<mvc:annotation-driven/>
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+
+<!--  
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="url" value="jdbc:sqlserver://localhost:1433;database=java"></property>
+		<property name="username" value="sa"></property>
+		<property name="password" value="passw0rd"></property>
+	</bean>
+<bean id="SessionFactory"   destroy-method="destroy"
+	class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	<property name="dataSource"  ref="dataSource"></property>
+     <property name="configLocation" >
+      <value>classpath:hibernate.cfg.xml</value>
+     </property>
+     <property name="hibernateProperties">
+     <props>
+        <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop> 
+         <prop key="hibernate.show_sql">true</prop>
+      </props>
+     </property>
+</bean>
+<bean id="mt" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+<property name="sessionFactory" ref="SessionFactory"></property>
+</bean>
+<tx:annotation-driven transaction-manager="mt"/>
+-->
+
+</beans>
